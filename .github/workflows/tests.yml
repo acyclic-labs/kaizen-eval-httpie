@@ -4,21 +4,7 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - .github/workflows/tests.yml
-      - httpie/**/*.py
-      - setup.*
-      - tests/**/*.py
-  pull_request:
-    paths:
-      - .github/workflows/tests.yml
-      - httpie/**/*.py
-      - setup.*
-      - tests/**/*.py
-
+  workflow_dispatch:
 jobs:
   test:
     strategy:
